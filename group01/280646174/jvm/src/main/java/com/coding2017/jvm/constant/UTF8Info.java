@@ -34,4 +34,8 @@ public class UTF8Info extends ConstantInfo {
         this.value = value;
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }

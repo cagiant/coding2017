@@ -6,7 +6,7 @@ public class BinaryTreeNode {
     private BinaryTreeNode left;
     private BinaryTreeNode right;
 
-	public BinaryTreeNode insert(Integer o) {
+    public BinaryTreeNode insert(Integer o) {
         if (o <= data) {
             if (left == null) {
                 left = new BinaryTreeNode(o);
@@ -20,10 +20,10 @@ public class BinaryTreeNode {
             }
             return right.insert(o);
         }
-	}
+    }
 
     public BinaryTreeNode(Integer data) {
-	    this.data = data;
+        this.data = data;
     }
 
     public Integer getData() {

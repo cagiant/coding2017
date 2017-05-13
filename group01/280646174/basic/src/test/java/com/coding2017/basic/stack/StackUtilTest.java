@@ -33,15 +33,15 @@ public class StackUtilTest {
     public void testRemove() {
         Stack s = mockStack();
         StackUtil.remove(s, 3);
-        Assert.assertArrayEquals(s.toArray(), new Integer[] {1, 2, 4, 5});
+        Assert.assertArrayEquals(s.toArray(), new Integer[] { 1, 2, 4, 5 });
     }
 
     @Test
     public void testGetTop() {
         Stack s = mockStack();
         Object[] top = StackUtil.getTop(s, 2);
-        Assert.assertArrayEquals(s.toArray(), new Integer[]{1, 2, 3, 4, 5});
-        Assert.assertArrayEquals(top, new Integer[] {5, 4});
+        Assert.assertArrayEquals(s.toArray(), new Integer[] { 1, 2, 3, 4, 5 });
+        Assert.assertArrayEquals(top, new Integer[] { 5, 4 });
     }
 
     @Test

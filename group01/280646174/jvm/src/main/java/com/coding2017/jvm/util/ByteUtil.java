@@ -18,7 +18,7 @@ public class ByteUtil {
         for (int i = 0; i < codes.length; i++) {
             byte b = codes[i];
             int value = b & 0xFF;
-            String strHex = Integer.toHexString(value);
+            String strHex = Integer.toHexString(value).toUpperCase();
             if (strHex.length() < 2) {
                 strHex = "0" + strHex;
             }

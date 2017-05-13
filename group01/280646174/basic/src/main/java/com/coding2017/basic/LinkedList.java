@@ -138,7 +138,7 @@ public class LinkedList implements List {
         if (size > 0) {
             builder.append(get(0));
         }
-        for(Node node = head.next; node != null; node = node.next) {
+        for (Node node = head.next; node != null; node = node.next) {
             builder.append(", ").append(node.data);
         }
         builder.append("]");
@@ -148,12 +148,13 @@ public class LinkedList implements List {
     private static class Node {
         private Object data;
         private Node next;
-		private Node prev;
+        private Node prev;
 
-		public Node() {}
+        public Node() {
+        }
 
         private Node(Object data) {
-		    this.data = data;
+            this.data = data;
         }
     }
 
