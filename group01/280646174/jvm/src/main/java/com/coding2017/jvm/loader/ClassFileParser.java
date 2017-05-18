@@ -57,7 +57,7 @@ public class ClassFileParser {
 
     private boolean checkMagicNumber(ByteCodeIterator iterator) {
         String magicNumber = iterator.nextU4ToString();
-        return "cafebabe".equals(magicNumber);
+        return "CAFEBABE".equals(magicNumber);
     }
 
     private AccessFlag parseAccessFlag(ByteCodeIterator iter) {

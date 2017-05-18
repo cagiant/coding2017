@@ -9,7 +9,6 @@ package datastructure.stack;
 public class QuickMinStack {
     
     private int size = 0;
-    private int index = 0; // 目前的最早入库索引
     private Node head;
     
     public int findMin(){
@@ -76,13 +75,13 @@ public class QuickMinStack {
 	public int pop(){
 	    Node temp = head;
 	    while (temp.next != null) {
-	        if (temp.index == this.index) {
+	        if (temp.index == this.size - 1) {
 	            Node dest =  remove(temp);
 	            return dest.data;
 	        }
 	        temp = temp.next;
 	    }
-	    if (temp.index == this.index) {
+	    if (temp.index == this.size - 1) {
 	        Node dest =  remove(temp);
             return dest.data;
 	    }
@@ -92,7 +91,6 @@ public class QuickMinStack {
 	private Node remove(Node node) {
 	    if (node.prev == null && node.next == null) { // 唯一的元素,删除后将初始化size和index
 	        this.size = 0;
-	        this.index = 0;
 	        return node;
 	    }
 	    if (node.prev == null) { // 元素在开头位置
@@ -109,7 +107,6 @@ public class QuickMinStack {
     	    node.next = null;
 	    }
 	    this.size--;
-        this.index++;
 	    return node;
 	}
 	
